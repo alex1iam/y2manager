@@ -16,7 +16,7 @@
 ## Установка на сервер
 
 ### Быстрая установка
-1. Распакуйте проект в `/opt/yandex2mqtt/smarthome/`
+1. Распакуйте проект в `/opt/yandex2mqtt/y2manager/`
 2. Запустите: `chmod +x install.sh && ./install.sh`
 3. Убедитесь что файл `config.js` находится в `/opt/yandex2mqtt/config.js`
 
@@ -24,7 +24,7 @@
 ```
 /opt/yandex2mqtt/
 ├── config.js                     # Конфигурация устройств (yandex2mqtt)
-└── smarthome/                    # Веб-приложение
+└── y2manager/                    # Веб-приложение
     ├── client/                   # Frontend React приложение
     ├── server/                   # Backend Express API
     ├── shared/                   # Общие схемы TypeScript
@@ -33,7 +33,7 @@
 
 ### Команды управления
 ```bash
-cd /opt/yandex2mqtt/smarthome
+cd /opt/yandex2mqtt/y2manager
 
 # Разработка
 npm run dev
