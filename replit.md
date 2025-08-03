@@ -32,7 +32,7 @@ Preferred communication style: Simple, everyday language.
 - **Configuration Path**: `/opt/yandex2mqtt/config.js` (production server path)
 - **Configuration Format**: JavaScript module.exports format for yandex2mqtt compatibility
 - **Data Models**: Device configurations with MQTT topics, capabilities, and room organization
-- **Server Structure**: Application files in `/opt/yandex2mqtt/smarthome/`, config in `/opt/yandex2mqtt/config.js`
+- **Server Structure**: Application files in `/opt/yandex2mqtt/y2manager/`, config in `/opt/yandex2mqtt/config.js`
 - **Path Configuration**: User can change config file path through Settings modal interface
 
 ## Key Components
