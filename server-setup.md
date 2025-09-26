@@ -1,5 +1,3 @@
-# Настройка YANDEX2MQTT CONFIG MANAGER на сервере
-
 ## Структура файлов на сервере
 
 ```
@@ -67,7 +65,7 @@ npm install
 ```bash
 npm run dev
 ```
-Приложение будет доступно на http://localhost:5000
+Приложение будет доступно на http://ip:8082
 
 ### 5. Запуск в продакшене
 ```bash
@@ -96,7 +94,7 @@ ExecStart=/usr/bin/npm run start
 Restart=always
 RestartSec=10
 Environment=NODE_ENV=production
-Environment=PORT=5000
+Environment=PORT=8082
 
 [Install]
 WantedBy=multi-user.target
@@ -123,7 +121,7 @@ server {
     server_name your-domain.com;
     
     location / {
-        proxy_pass http://localhost:5000;
+        proxy_pass http://localhost:8082;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -200,8 +198,8 @@ sudo chown $USER:$USER /opt/yandex2mqtt/config.js
 ### Порт занят
 ```bash
 # Найдите процесс использующий порт 5000
-sudo lsof -i :5000
+sudo lsof -i :8082
 
 # Измените порт в package.json или переменной окружения
-export PORT=8080
+export PORT=8082
 ```
