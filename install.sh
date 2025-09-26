@@ -69,7 +69,7 @@ ExecStart=/usr/bin/npm run start
 Restart=always
 RestartSec=10
 Environment=NODE_ENV=production
-Environment=PORT=5000
+Environment=PORT=8082
 
 [Install]
 WantedBy=multi-user.target
@@ -96,4 +96,4 @@ echo "  sudo systemctl stop y2manager      - остановка службы"
 echo "  sudo systemctl enable y2manager    - автозапуск"
 echo "  sudo systemctl status y2manager    - статус службы"
 echo ""
-echo "После запуска приложение будет доступно на http://localhost:5000"
+echo "После запуска приложение будет доступно на http://ip:8082"
