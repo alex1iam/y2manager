@@ -142,21 +142,24 @@ export default function DeviceCard({ device, onEdit, getDeviceIcon }: DeviceCard
         </div>
 
         <div className="space-y-2">
-          {brightnessValue !== null && (
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">Яркость:</span>
-              <span className="text-sm font-medium">{brightnessValue}%</span>
-            </div>
-          )}
-          
-          {primaryMqttTopic && (
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">MQTT топик:</span>
-              <span className="text-xs text-gray-500 font-mono truncate max-w-32" title={primaryMqttTopic}>
-                {primaryMqttTopic}
-              </span>
-            </div>
-          )}
+            {brightnessValue !== null && (
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Яркость:</span>
+                <span className="text-sm font-medium">{brightnessValue}%</span>
+              </div>
+            )}
+
+            {primaryMqttTopic && (
+              <div className="space-y-1">
+                <div className="text-sm text-gray-600">MQTT топик:</div>
+                <div
+                  className="text-xs text-gray-500 font-mono break-all leading-snug"
+                  title={primaryMqttTopic}
+                >
+                  {primaryMqttTopic}
+                </div>
+              </div>
+            )}
         </div>
       </CardContent>
     </Card>
